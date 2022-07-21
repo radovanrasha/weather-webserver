@@ -1,6 +1,6 @@
-console.log('client side java')
+console.log('client side javaa')
 
-
+ 
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
