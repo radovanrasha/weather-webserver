@@ -11,7 +11,7 @@ body{
 }
 
 footer {
-    color: #888888;
+    color: #ad110b;
     border-top: 2px dashed #888888;
     padding: 16px 0;
     font-size: 20px;
@@ -55,4 +55,14 @@ button{
     border: 1px solid lightcoral;
     font-size: large;
     color: darkred;
+}
+
+.warning{
+    color: red;
+    font-size: 30px;
+}
+
+.notify{
+    color: blueviolet;
+    font-size: 20px;
 }

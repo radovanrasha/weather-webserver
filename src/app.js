@@ -41,7 +41,7 @@ app.get('/about', (req, res)=>{
 
 app.get('/help', (req, res)=>{
     res.render('help', {
-        helpMess: 'this is normal help message that is supose to help u with all problems',
+        helpMess: 'This is normal help message that is suppose to help you with all problems',
         title: 'Help page',
         name: 'radovanrasha'
     })
