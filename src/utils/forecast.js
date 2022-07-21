@@ -12,7 +12,7 @@ const forecast = (latitude, longitude, callback)=>{
                 callback('Location doesnt exist.', undefined)
             }else{
                 
-                callback(undefined, 'We are in ' + body.location.name + '. Weather is ' + body.current.weather_descriptions[0] + '. Current temp is ' + body.current.temperature + ' but it feels like ' + body.current.feelslike + ' . ')
+                callback(undefined, 'We are in ' + body.location.name + '. Weather is ' + body.current.weather_descriptions[0] + '. Current temp is ' + body.current.temperature + ' but it feels like ' + body.current.feelslike + ' .  Local date/time is ' + body.location.localtime + '. And timezone is ' + body.loaction.timezone_id + '.')
             }
     })
 
