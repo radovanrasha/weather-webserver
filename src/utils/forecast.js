@@ -11,9 +11,13 @@ const forecast = (latitude, longitude, callback)=>{
             }else if(body.error){
                 callback('Location doesnt exist.', undefined)
             }else{
-                
-                callback(undefined, 'We are in ' + body.location.name + '. Weather is ' + body.current.weather_descriptions[0] + '. Current temp is ' + body.current.temperature + ' but it feels like ' + body.current.feelslike + ' . Time zone of this city is ' + body.location.timezone_id + '. And local date/time is ' + body.location.localtime)
-            }
+                if(body.current.temperature === body.current.feelslike){
+                    callback(undefined,  'We are in ' + body.location.name + '. Weather is ' + body.current.weather_descriptions[0] + '. Current temp is ' + body.current.temperature + ' and it feels same. Time zone of this city is ' + body.location.timezone_id + '. And local date/time is ' + body.location.localtime)
+                }else{
+                    callback(undefined, 'We are in ' + body.location.name + '. Weather is ' + body.current.weather_descriptions[0] + '. Current temp is ' + body.current.temperature + ' but it feels like ' + body.current.feelslike + ' . Time zone of this city is ' + body.location.timezone_id + '. And local date/time is ' + body.location.localtime)
+            
+                }
+                }
     })
 
 
